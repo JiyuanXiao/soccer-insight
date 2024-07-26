@@ -2,7 +2,7 @@ import React from "react";
 
 const NavigationBar: React.FC = () => {
   return (
-    <nav className="flex z-10 gap-5 justify-between self-center w-full max-w-[319px] bg-white">
+    <nav className="flex z-10 gap-5 justify-between self-center w-full bg-white px-10">
       <NavItem
         icon="shrink-0 rounded-full bg-zinc-300 h-[25px] w-[25px]"
         label="首页"

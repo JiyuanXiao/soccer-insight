@@ -22,7 +22,7 @@ const ScheduleCard: React.FC<ScheduleCardProps> = ({
   return (
     <div
       style={{ backgroundImage: `url(${backgroundImage.src})` }}
-      className={`min-w-24 h-32 border-r-2 border-x-gray-400 rounded-xl bg-cover bg-center`}
+      className={`min-w-24 min-h-32 border-r-2 border-x-gray-400 rounded-xl bg-cover bg-center`}
     >
       <div className="flex flex-row justify-between w-full h-1/5  ">
         <time className="ml-2 self-end text-white">{matchStartTime}</time>

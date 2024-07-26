@@ -51,9 +51,9 @@ const ScheduleCarousel: React.FC = () => {
   ));
 
   return (
-    <div className="flex flex-col w-full border-gray-300 border-t-2">
+    <div className="flex flex-col w-full h-full border-gray-300 border-t-2">
       <a className="text-gray-400 self-end text-sm mt-2">{"全部赛程"}</a>
-      <div className="flex gap-3 w-full items-start px-2 pt-1 pb-7 text-xs font-medium whitespace-nowrap overflow-x-scroll shadow-sm text-stone-400">
+      <div className="flex gap-3 w-full h-full items-start px-2 pt-1 pb-1 text-xs font-medium whitespace-nowrap overflow-x-scroll shadow-sm text-stone-400">
         {scheduledMatchesList}
       </div>
     </div>

@@ -5,6 +5,7 @@ const mock_choices = [
   {
     title: "英超风向标",
     winRate: "78%",
+    hitDescription: "近10中8",
     league: "英超",
     teams: "曼联vs韦斯咸",
     startTime: "2024-04-22 23:00",
@@ -13,6 +14,7 @@ const mock_choices = [
   {
     title: "英超风向标",
     winRate: "78%",
+    hitDescription: "近10中8",
     league: "英超",
     teams: "曼联vs韦斯咸",
     startTime: "2024-04-22 23:00",
@@ -20,7 +22,8 @@ const mock_choices = [
   },
   {
     title: "英超风向标",
-    winRate: "333",
+    winRate: "78%",
+    hitDescription: "近10中8",
     league: "英超",
     teams: "曼联vs韦斯咸",
     startTime: "2024-04-22 23:00",
@@ -28,21 +31,21 @@ const mock_choices = [
   },
 ];
 
-const DailyChoicesList = () => {
+const ChoiceMatchList = () => {
   const matchesList = mock_choices.map((match, index) => (
     <ChoiceMatchCard key={index} {...match} />
   ));
 
   return (
-    <div className="w-full pt-8">
-      <div className="w-8 ml-2 border-4 border-red-600" />
+    <div className="flex flex-col w-full pt-8 h-full">
+      <div className="w-8 m-1 border-2 border-red-500" />
       <div className="flex flex-row justify-between ">
         <text className="text-black font-semibold mb-3">今日精选</text>
         <a className="text-gray-400 text-xs mx-2 self-end">查看更多</a>
       </div>
-      <div className="w-full overflow-y-scroll">{matchesList}</div>
+      <div className="flex-grow w-full overflow-y-scroll">{matchesList}</div>
     </div>
   );
 };
 
-export default DailyChoicesList;
+export default ChoiceMatchList;
