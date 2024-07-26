@@ -23,7 +23,7 @@ const ChoiceMatchCard: React.FC<MatchCardProps> = ({
   score,
 }) => {
   return (
-    <article className="flex flex-col px-1.5 py-2.5 mt-2 w-full bg-white border border-solid border-neutral-200">
+    <article className="flex flex-col px-1.5 py-2.5 mt-2 mx-2 bg-white border border-solid border-neutral-200">
       <div className="flex w-full h-full gap-5 justify-between whitespace-nowrap">
         <div className="flex w-auto h-full flex-col self-start font-black">
           <div className="w-fit px-1.5 py-1 text-xs text-amber-500 rounded-xl border border-amber-500 border-solid">

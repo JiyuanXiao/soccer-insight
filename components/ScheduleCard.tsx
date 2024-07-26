@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { AiFillStar } from "react-icons/ai";
-import React, { ReactElement, ReactNode, FC } from "react";
+import React from "react";
 
 interface ScheduleCardProps {
   backgroundImage: StaticImageData;

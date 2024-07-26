@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-grow items-start justify-start h-full p-0 font-serif mt-2">
       <div className="flex flex-col h-4/12 tall:h-3/12 xtall:1/12 w-full">
-        <time className="self-start ml-3 text-xs font-black text-black">
-          2024.04.22
-        </time>
-        <MainHeader content="本日赛程" />
+        <div className="flex flex-col ml-2">
+          <time className="self-start text-xs font-black text-black">
+            2024.04.22
+          </time>
+          <MainHeader content="本日赛程" />
+        </div>
         <div className="h-full">
           <ScheduleCarousel />
         </div>

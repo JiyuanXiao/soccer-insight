@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/NavigationBar";
+import PointCard from "@/components/PointCard.client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} flex flex-col max-w-96 m-auto h-screen`}
-      >
+      <body className={`${inter.className} flex flex-col m-auto h-screen`}>
         <div className="w-full h-11/12">{children}</div>
         <div className="flex w-full h-1/12 pt-2">
           <NavigationBar />
         </div>
+        <PointCard />
       </body>
     </html>
   );
