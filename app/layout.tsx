@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Serif, Noto_Serif_SC } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/NavigationBar";
 import PointCard from "@/components/PointCard.client";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto_serifi = Noto_Serif({ subsets: ["latin"] });
+const noto_serifi_sc = Noto_Serif_SC({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col m-auto h-screen`}>
+      <body
+        className={`${noto_serifi.className} ${noto_serifi_sc.className} flex flex-col m-auto h-screen`}
+      >
         <div className="w-full h-11/12">{children}</div>
         <div className="flex w-full h-1/12 pt-2">
           <NavigationBar />
