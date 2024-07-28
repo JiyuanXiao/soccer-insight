@@ -8,7 +8,8 @@ interface MatchCardProps {
   winRate: string;
   hitDescription: string;
   league: string;
-  teams: string;
+  firstTeam: string;
+  secondTeam: string;
   startTime: string;
   score: string;
 }
@@ -18,7 +19,8 @@ const ChoiceMatchCard: React.FC<MatchCardProps> = ({
   winRate,
   hitDescription,
   league,
-  teams,
+  firstTeam,
+  secondTeam,
   startTime,
   score,
 }) => {
@@ -41,7 +43,7 @@ const ChoiceMatchCard: React.FC<MatchCardProps> = ({
       <div className="flex gap-5 justify-between items-start py-2 pr-4 pl-1.5 mt-1 w-full bg-gray-200">
         <div className="flex flex-col self-start">
           <div className="flex gap-1.5 text-lg font-semibold text-black">
-            <div className="grow my-auto">{`${league} ${teams}`}</div>
+            <div className="grow my-auto">{`${league} ${firstTeam}vs${secondTeam}`}</div>
             <Image
               loading="lazy"
               src={liveIcon}

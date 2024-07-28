@@ -4,7 +4,7 @@ import ChoiceMatchList from "@/components/ChoiceMatchList";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-grow items-start justify-start h-full mt-2">
+    <main className="flex flex-col flex-grow items-start justify-start h-full pt-2">
       <div className="flex flex-col h-4/12 tall:h-3/12 xtall:1/12 w-full">
         <div className="flex flex-col ml-2">
           <time className="self-start text-xs font-black text-black">
