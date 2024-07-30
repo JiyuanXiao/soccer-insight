@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`${noto_serifi.className} ${noto_serifi_sc.className} flex flex-col m-auto h-screen`}
       >
         <div className="w-full h-11/12">{children}</div>
-        <div className="flex w-full h-1/12 pt-2">
+        <div className="flex w-full h-1/12">
           <NavigationBar />
         </div>
         <PointCard />

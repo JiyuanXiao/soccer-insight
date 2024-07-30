@@ -1,26 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
 import Image from "next/image";
 import newsImage from "@/public/news.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel } from "flowbite-react";
 
 const mockNews = [
   {
     newsImage: newsImage,
     title: "伦敦打比！垃圾车拦路？",
-    description: "英超 2024-04-22",
+    description: "英超 2024-04-22", // words limited
   },
   {
     newsImage: newsImage,
     title: "Second slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    description: "Nulla vitae elit libero", // words limited
   },
   {
     newsImage: newsImage,
     title: "Third slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    description: "Nulla vitae elit libero", // words limited
   },
 ];
 
@@ -42,9 +41,7 @@ const NewCarousel = () => {
   }, [index]);
 
   const newsCarousel = mockNews.map((news, index) => (
-    <Carousel.Item key={index}>
-      <Image src={news.newsImage} alt={news.title} />
-    </Carousel.Item>
+    <Image key={index} src={news.newsImage} alt={news.title} />
   ));
 
   const indexIndicator = mockNews.map((_, i) => (
@@ -59,13 +56,23 @@ const NewCarousel = () => {
   ));
 
   return (
-    <div className="h-full max-w-md pt-4">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        {newsCarousel}
-      </Carousel>
-      <h3 className="text-black font-bold pt-1">{currentTitle}</h3>
-      <text className="text-gray-500">{currentDescription}</text>
-      <div className="flex flex-row justify-center w-full h-fit mt-3  border-gray-200 border-b-[1px]">
+    <div className={`flex flex-col items-center h-full max-w-md pt-4`}>
+      <div className=" h-60 w-screen max-w-md ">
+        <Carousel
+          onSlideChange={(index) => handleSelect(index)}
+          indicators={false}
+          slideInterval={6000}
+        >
+          {newsCarousel}
+        </Carousel>
+      </div>
+      <h3 className="self-start text-black font-bold text-xl pt-1 mx-1">
+        {currentTitle}
+      </h3>
+      <text className="self-start text-gray-400 text-sm mx-1">
+        {currentDescription}
+      </text>
+      <div className="flex flex-row justify-center w-full h-fit mt-2  border-gray-200 border-b-[1px]">
         {indexIndicator}
       </div>
     </div>
